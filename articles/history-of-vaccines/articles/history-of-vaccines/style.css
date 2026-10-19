@@ -1,0 +1,267 @@
+
+/* MedScience Hub - Article Styles */
+
+:root {
+  --primary: #145b78;
+  --secondary: #238b9b;
+  --text: #243244;
+  --muted: #5b6878;
+  --background: #f4f7fa;
+  --border: #dce5ec;
+  --card: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--background);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* Reusable content width */
+
+.container {
+  width: min(900px, calc(100% - 36px));
+  margin: 0 auto;
+}
+
+/* Header */
+
+.hero {
+  padding: 65px 0;
+  color: white;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  margin: 0 0 12px;
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1.2;
+}
+
+.subtitle {
+  max-width: 650px;
+  margin: 0;
+  color: #e7f5f8;
+  font-size: 18px;
+}
+
+/* Article body */
+
+.article {
+  margin-top: 32px;
+  margin-bottom: 40px;
+  padding: 42px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 8px 28px rgba(20, 50, 70, 0.06);
+}
+
+.article h2 {
+  margin-top: 38px;
+  margin-bottom: 14px;
+  padding-bottom: 9px;
+  color: var(--primary);
+  border-bottom: 2px solid #e5eef3;
+  font-size: 25px;
+  line-height: 1.4;
+}
+
+.article h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: var(--primary);
+  font-size: 19px;
+  line-height: 1.4;
+}
+
+.article p {
+  margin: 12px 0;
+}
+
+.article li {
+  margin-bottom: 9px;
+}
+
+.article a {
+  color: #087895;
+  text-decoration: none;
+}
+
+.article a:hover {
+  text-decoration: underline;
+}
+
+.intro {
+  padding: 20px;
+  background: #edf7fa;
+  border-left: 5px solid var(--secondary);
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+/* Historical milestone sections */
+
+.milestone {
+  margin: 20px 0;
+  padding: 20px;
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--secondary);
+  border-radius: 8px;
+}
+
+.milestone p {
+  margin-bottom: 0;
+}
+
+/* Table */
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin: 20px 0;
+  border-radius: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+th,
+td {
+  padding: 13px 15px;
+  border: 1px solid var(--border);
+  text-align: left;
+}
+
+th {
+  color: white;
+  background: var(--primary);
+}
+
+tbody tr:nth-child(even) {
+  background: #f3f7fa;
+}
+
+tbody tr:hover {
+  background: #e9f5f8;
+}
+
+/* India timeline */
+
+.india-timeline {
+  padding-left: 25px;
+}
+
+/* Three information cards */
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.info-card {
+  padding: 20px;
+  background: #f4f9fb;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+}
+
+.info-card p {
+  margin-bottom: 0;
+  font-size: 15px;
+}
+
+/* Educational note */
+
+.note {
+  margin-top: 25px;
+  padding: 18px;
+  background: #fff8e8;
+  border-left: 4px solid #d49a27;
+  border-radius: 6px;
+}
+
+/* Footer */
+
+footer {
+  padding: 24px 0;
+  color: var(--muted);
+  text-align: center;
+  background: #eaf0f5;
+  font-size: 14px;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Mobile and tablet responsiveness */
+
+@media (max-width: 700px) {
+  .hero {
+    padding: 45px 0;
+  }
+
+  .article {
+    margin-top: 16px;
+    padding: 24px 18px;
+    border-radius: 10px;
+  }
+
+  .article h2 {
+    font-size: 22px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  th,
+  td {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    width: calc(100% - 24px);
+  }
+
+  .article {
+    padding: 18px 13px;
+  }
+
+  .intro {
+    padding: 14px;
+    font-size: 16px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+}
